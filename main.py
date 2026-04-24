@@ -25,7 +25,7 @@ WHERE num_of_moons = 0;
 df_name_seven = pd.read_sql("""
 SELECT name,mass
 FROM planets
-WHERE length(name) = 7;
+WHERE LENGTH(name) = 7;
 """,conn1)
 
 # CodeGrade step3
@@ -49,7 +49,7 @@ WHERE num_of_moons >= 1 AND mass < 1.00;
 df_blue = pd.read_sql("""
 SELECT name,color
 FROM planets
-WHERE color = "blue";
+WHERE color = 'blue';
 """,conn1)
 
 # CodeGrade step0
@@ -69,7 +69,7 @@ df_hungry = pd.read_sql("""
 SELECT name,age,breed
 FROM dogs
 WHERE hungry = 1
-ORDER BY age;
+ORDER BY age ASC;
 """,conn2)
 
 # CodeGrade step7
@@ -78,7 +78,7 @@ df_hungry_ages = pd.read_sql("""
 SELECT name,age,hungry
 FROM dogs
 WHERE hungry = 1 AND age BETWEEN 2 AND 7
-ORDER BY name;
+ORDER BY name ASC;
 """,conn2)
 
 # CodeGrade step8
