@@ -49,7 +49,7 @@ WHERE num_of_moons >= 1 AND mass < 1.00;
 df_blue = pd.read_sql("""
 SELECT name,color
 FROM planets
-WHERE color = 'blue';
+WHERE color LIKE '%blue%';
 """,conn1)
 
 # CodeGrade step0
