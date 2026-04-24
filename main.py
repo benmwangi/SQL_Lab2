@@ -86,7 +86,6 @@ ORDER BY name ASC;
 df_4_oldest = pd.read_sql("""
 SELECT name,age,breed
 FROM dogs
-GROUP BY breed
 ORDER BY age DESC
 LIMIT 4;
 """,conn2)
